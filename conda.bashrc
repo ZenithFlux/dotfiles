@@ -1,4 +1,4 @@
-#!usr/bin/env bash
+#!/usr/bin/env bash
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
