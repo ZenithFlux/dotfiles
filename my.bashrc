@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 PS1="\[\e[38;2;87;204;247m\e[1m\]\u\[\e[22m\] \[\e[38;2;150;150;150m\]\w \[\e[38;2;111;214;100m\]❯\[\e[0m\] "
+set -o vi
 
 alias python='python3'
 alias anaconda='source ~/conda.bashrc'

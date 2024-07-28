@@ -7,8 +7,7 @@ workspace=$(wmctrl -d | grep "\*" | cut -d " " -f 1)
 win_list=$(wmctrl -lx | grep "$app_wm_class" | grep "$workspace " | awk '{print $1}')
 
 if [ -z "$win_list" ]; then
-    $app_command
-    exit 0
+    exec $app_command
 fi
 
 active_win_id=$(xprop -root | grep '^_NET_ACTIVE_W' | awk -F'# 0x' '{print $2}')

@@ -7,7 +7,7 @@ name=$(basename "$dir" | tr . _)
 cd "$dir"
 
 if [ -z $TMUX ]; then
-    tmux new -A -s "$name" -c "$dir"
+    exec tmux new -A -s "$name" -c "$dir"
 else
     tmux new -d -s "$name" -c "$dir"
     tmux switch-client -t "$name"
