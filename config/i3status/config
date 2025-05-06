@@ -1,0 +1,44 @@
+general {
+    output_format = "i3bar"
+    colors = true
+    interval = 5
+}
+
+order += "cpu_temperature 0"
+order += "memory"
+order += "volume master"
+order += "battery 0"
+order += "time"
+
+memory {
+    format = "󰍛 %used/%total"
+    threshold_degraded = "15%"
+    threshold_critical = "10%"
+}
+
+volume master {
+    format = "󰕾 %volume"
+    format_muted = "󰖁 muted"
+    device = "pulse"
+}
+
+battery 0 {
+    format = "%status %percentage"
+    integer_battery_capacity = true
+    format_down = "󰂎 No battery"
+    status_chr = "󱐋 CHR"
+    status_bat = "󱟤 BAT"
+    status_unk = "? UNK"
+    status_full = "󰁹 FULL"
+    low_threshold = 10
+}
+
+time {
+    format = "%a %d %b, %I:%M %p"
+}
+
+cpu_temperature 0 {
+    format = " %degrees °C"
+    max_threshold = 90
+    path = "/sys/devices/virtual/thermal/thermal_zone0/temp"
+}
