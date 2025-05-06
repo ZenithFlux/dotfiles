@@ -7,7 +7,7 @@ alias o="xdg-open"
 alias python='python3'
 alias anaconda='source ~/conda.bashrc'
 alias mypackages="comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)"
-alias runssh='eval `ssh-agent` && ssh-add'
+alias sshpass='eval `ssh-agent` && ssh-add'
 function ex { nemo ${1-.} > /dev/null 2>&1 & disown; }
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
