@@ -75,6 +75,8 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
+workspace_layout tabbed
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -164,11 +166,10 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 bindsym $mod+m kill
 bindsym $mod+f fullscreen toggle
-bindsym $mod+e layout toggle split
+bindsym $mod+e layout toggle splith splitv tabbed
 # bindsym $mod+s layout stacking
 # bindsym $mod+q layout tabbed
-bindsym $mod+colon split h
-bindsym $mod+comma split v
+bindsym $mod+colon split toggle
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+p focus parent
