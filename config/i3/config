@@ -197,6 +197,7 @@ bindsym Shift+Print exec gnome-screenshot -a
 bindsym $mod+Shift+t exec gnome-terminal; workspace $ws1
 bindsym $mod+Shift+b exec brave-browser-stable; workspace $ws2
 bindsym $mod+Shift+f exec nemo; workspace $ws3
+bindsym $mod+Shift+u exec mintupdate; workspace $ws10
 bindsym $mod+Shift+s exec gnome-system-monitor
 bindsym $mod+Shift+v exec openfortigui
 
