@@ -3,6 +3,7 @@ Following additional packages were installed after i3 and are used in the config
 - maim
 - feh
 - brightnessctl
+- betterlockscreen + imagemagick + i3lock-color
 
 Problems I faced and how I solved them:
 - To change the Caps Lock behavior: Add XKBOPTIONS to `/etc/default/keyboard`.

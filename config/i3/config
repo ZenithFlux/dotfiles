@@ -22,14 +22,16 @@ client.unfocused #474747 #474747 #cccccc #292d2e #474747
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
+# --no-startup-id prevents i3 from attaching the program to the workspace
 exec --no-startup-id dex --autostart --environment i3
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- cinnamon-screensaver-command --lock
+exec --no-startup-id betterlockscreen -u ~/.wallpaper
+# xss-lock grabs a logind suspend inhibit lock and will use the given command to lock
+# the screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l dim
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.

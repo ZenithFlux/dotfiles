@@ -1,9 +1,10 @@
-# .dotfiles
+# dotfiles
 
-Configuration notes:
+Setup steps:
 
-1. `source my.bashrc` in *.bashrc*.
-2. `$include my.inputrc` in *.inputrc*.
-3. Put *conda.bashrc* in home directory as *my.bashrc* loads it from there.
-4. Put the contents of *config* directory in *~/.config* directory of the system.
-5. Put *clear_trash* in */etc/cron.daily* directory to automatically delete files older than 30 days from the trash daily.
+1. Following files should be copied to the home directory:
+    - **my.bashrc**:  `source my.bashrc` in `.bashrc`.
+    - **my.inputrc**: `$include my.inputrc` in `.inputrc`.
+    - **conda.bashrc**
+2. Put contents of the `config` directory in `~/.config` directory of the system.
+3. Put `clear_trash` in `/etc/cron.daily` directory to automatically delete files older than 30 days from the trash daily.
