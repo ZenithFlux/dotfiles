@@ -5,7 +5,6 @@ set -o vi
 
 alias o="xdg-open"
 alias python='python3'
-alias anaconda='source ~/conda.bashrc'
 alias mypackages="comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)"
 function ex { nemo ${1-.} > /dev/null 2>&1 & disown; }
 
