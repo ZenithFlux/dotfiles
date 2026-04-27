@@ -1,5 +1,12 @@
 #!usr/bin/env bash
 
+if ! command -v fzf 2>&1 > /dev/null; then
+    if [ -n "$TMUX" ]; then
+        echo "'fzf' not found!!"
+    fi
+    return
+fi
+
 dir=$(printf "${PWD}\n${HOME}\n$(find ~/personal ~/work ~/other -maxdepth 1 -type d,l)" | fzf)
 if [ -z "$dir" ]; then
     [ -z "$TMUX" ] && return || exit 0
