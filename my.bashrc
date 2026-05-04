@@ -12,9 +12,9 @@ if command -v fzf 2>&1 > /dev/null; then
     eval "$(fzf --bash)"
 fi
 
-if [ -z $TMUX ]; then
-    source ~/.config/tmux/new_session.sh
-fi
+# if [ -z $TMUX ]; then
+#     source ~/.config/tmux/new_session.sh
+# fi
 
 # Initialize environment and stuff for projects
 initfile=.bashinit
