@@ -8,7 +8,9 @@ alias python='python3'
 alias mypackages="comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)"
 function ex { nemo ${1-.} > /dev/null 2>&1 & disown; }
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+if command -v fzf 2>&1 > /dev/null; then
+    eval "$(fzf --bash)"
+fi
 
 if [ -z $TMUX ]; then
     source ~/.config/tmux/new_session.sh
