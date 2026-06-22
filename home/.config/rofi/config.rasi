@@ -1,0 +1,5 @@
+@theme "/home/chaitanya/.local/share/rofi/themes/everforest.rasi"
+
+configuration {
+    show-icons: true;
+}

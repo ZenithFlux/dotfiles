@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon></icon>
+	<name>Compute SHA-256</name>
+	<submenu></submenu>
+	<unique-id>1784215293372600-1</unique-id>
+	<command>alacritty -e sh -c &apos;sha256sum %F ; echo &quot;Press Enter to exit...&quot; ; read -r&apos;</command>
+	<description>Compute SHA-256 of the files</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1784042068639709-1</unique-id>
+	<command>alacritty --working-directory %f</command>
+	<description>Example for a custom action</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name>Open as root</name>
+	<submenu></submenu>
+	<unique-id>1784214660508862-1</unique-id>
+	<command>thunar admin://%f</command>
+	<description>Open directory with root privileges</description>
+	<range>1-1</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+</actions>
