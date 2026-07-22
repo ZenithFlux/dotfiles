@@ -64,7 +64,7 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal    = "alacritty"
+local terminal    = "kitty"
 local browser     = "brave"
 local fileManager = "thunar"
 local app_launcher = "rofi -modes drun -show"
@@ -310,6 +310,8 @@ hl.gesture({
 ---------------------
 
 local mainMod = "ALT" -- Sets "Windows" key as main modifier
+
+hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/reload_configs.sh"))
 
 hl.bind(mainMod .. " + END", hl.dsp.exec_cmd("poweroff"))
 hl.bind(mainMod .. " + KP_END", hl.dsp.exec_cmd("poweroff"))

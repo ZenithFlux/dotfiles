@@ -14,7 +14,7 @@ Run `./check_sync.sh` to verify that the repo files are synced up with the syste
 
 - **Hyprland**
     - Requires: `dunst pipewire wireplumber xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-desktop-portal-gnome hyprpolkitagent qt5-wayland qt6-wayland xorg-xhost`
-    - Apps used in config: `alacritty thunar waybar rofi rofimoji hyprpaper brave copyq`
+    - Apps used in config: `kitty thunar waybar rofi rofimoji hyprpaper brave copyq`
     - Plugins used: [HyprCapture](https://github.com/gfhdhytghd/HyprCapture)
     - Cursor Theme: [Bibata-Modern-Classic](https://github.com/ful1e5/Bibata_Cursor)
 
