@@ -1,0 +1,14 @@
+* {
+    font-family: JetBrainsMonoNLNerdFontPropo;
+}
+window#waybar > box {
+    padding: 0 5px;
+}
+
+#workspaces button {
+    border-radius: 0
+}
+
+#workspaces button.active {
+    background-color: green;
+}

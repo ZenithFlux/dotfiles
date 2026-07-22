@@ -20,7 +20,7 @@ Run `./check_sync.sh` to verify that the repo files are synced up with the syste
 
 - **Fonts**: The following fonts are a must install:
     - **A text font (like `noto-fonts noto-fonts-cjk`)**: Required to draw GUI windows and display text.
-    - **A nerd font (like `ttf-jetbrains-mono-nerd`)**: Required to display special icons, glyphs, and symbols.
+    - **A nerd font**: Required to display special icons, glyphs, and symbols. Install `ttf-jetbrains-mono-nerd` since it is being used in several configs.
     - **An emoji font (like `noto-fonts-emoji`)**: Required to display standard emojis.
 
 - **greetd-tuigreet**: After installation, `sudo systemctl enable greetd.service`.

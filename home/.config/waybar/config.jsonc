@@ -1,0 +1,89 @@
+{
+    "layer": "top",
+    "spacing": 10,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "backlight", "wireplumber", "battery", "power-profiles-daemon"],
+    "hyprland/window": {
+        "max-length": 50
+    },
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
+        }
+    },
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "states": {
+            "max": 100,
+            "not_max": 99
+        },
+        "format-discharging-max": "󰁹 {capacity}%",
+        "format-icons": {
+            "discharging": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"],
+            "not-charging": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"],
+
+            "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋"],
+            "plugged": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋"],
+
+            "full": ["󱟢"]
+        }
+    },
+    "clock": {
+        "interval": 1,
+        "format": "<span weight=\"bold\">{:%a %d %b %Y %H:%M:%S}</span>",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode"             : "month",
+            "mode-mon-col"     : 3,
+            "on-scroll"        : 1,
+            "iso8601": true,
+            "format": {
+                "months":     "<span color='#ffead3'><b>{}</b></span>",
+                "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click": "shift_up",
+            "on-click-right": "shift_down",
+            "on-click-middle": "mode"
+        }
+    },
+
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        // "format-bluetooth": "{volume}% {icon}",
+        "format-muted": " {volume}%",
+        "format-icons": ["", ""],
+        "scroll-step": 1
+    },
+
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
+    }
+}
