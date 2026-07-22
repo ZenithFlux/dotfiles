@@ -7,7 +7,7 @@ if ! command -v fzf 2>&1 > /dev/null; then
     return
 fi
 
-dir=$(printf "${PWD}\n${HOME}\n$(find ~/personal ~/work ~/other -maxdepth 1 -type d,l)" | fzf)
+dir=$(printf "${PWD}\n${HOME}\n$(find ~/Projects -mindepth 1 -maxdepth 2 -type d,l)" | fzf)
 if [ -z "$dir" ]; then
     [ -z "$TMUX" ] && return || exit 0
 fi

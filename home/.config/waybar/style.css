@@ -1,0 +1,26 @@
+* {
+    font-family: JetBrainsMonoNLNerdFontPropo;
+}
+
+window#waybar > box {
+    padding: 0 5px;
+    background-color: black;
+}
+
+#workspaces button {
+    border-radius: 0;
+    border-bottom: 4px solid rgba(0, 0, 0, 0);
+    min-height: 20px;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+#workspaces button.active {
+    background-color: rgba(126, 227, 116, 0.5);
+    border-bottom: 4px solid rgb(174, 227, 169);
+    min-height: 5px;
+}
