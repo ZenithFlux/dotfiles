@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Remove
+Type = Package
+Target = shim-signed
+
+[Action]
+Depends = coreutils
+Depends = diffutils
+Description = Removing shim binaries from ESP...
+When = PreTransaction
+Exec = /usr/local/bin/shim-setup.sh remove

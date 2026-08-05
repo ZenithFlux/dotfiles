@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = shim-signed
+
+[Action]
+Depends = coreutils
+Depends = diffutils
+Description = Copying shim binaries to ESP...
+When = PostTransaction
+Exec = /usr/local/bin/shim-setup.sh install

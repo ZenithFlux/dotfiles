@@ -2,9 +2,12 @@
 
 Configs and other files of my **Arch Linux** system.
 
-Run `./check_sync.sh` to verify that the repo files are synced up with the system.
+Run `./check_sync.sh` to check if the repo files are synced with the system.
 
 ## Notes
+
+> [!NOTE]  
+> This section assumes that the files in this repo are synced with the system.
 
 - **Reflector**: Enable the weekly timer with `sudo systemctl enable --now reflector.timer`. Also, reflector can't read the config file if its a symlink.
 
@@ -45,6 +48,16 @@ Run `./check_sync.sh` to verify that the repo files are synced up with the syste
 - **QT+KDE themes**: Use `qt6ct-kde` and `kvantum` together to set themes for QT6 and KDE apps. Also install `qt5ct` and `kvantum-qt5` for QT5 apps.
 
 - **GTK themes**: Use `nwg-look` to set themes for GTK apps.
+
+- **Secure Boot**:
+    1. Follow [these instructions](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#shim_with_key) to generate an MOK pair along with `MOK.cer`. All MOK.* files should be kept in `/etc/secure-boot/`.
+    3. Configure the variables in `shim-setup.sh` and `grub-mkstandalone-sign.sh` in `/usr/local/bin/`.
+    4. Install `sbsigntools` and `shim-signed` and then run the following:
+        ``` sh
+        sudo grub-mkstandalone-sign.sh  # To generate a signed grub EFI (grubx64.efi)
+        sudo mkinitcpio -P              # To sign the kernel
+        ```
+    5. After rebooting with secure boot enabled, enroll the `MOK.cer` placed along with the signed grub EFI.
 
 
 <!-- - **Dolphin** -->
