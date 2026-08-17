@@ -33,6 +33,7 @@ function update {
         sudo systemctl start --no-block reflector.service && journalctl -fu reflector.service
     elif [ "$1" = "pkgs" ]; then
         paru -Syu
+        hyprpm update
     else
         echo "ERROR: Invalid or no argument!!"
     fi

@@ -35,6 +35,7 @@ hl.env("CLUTTER_BACKEND", "wayland")
 -----------------------------
 
 require("hyprland_configs.core")
+require("hyprland_configs.inputs")
 require("hyprland_configs.plugins")
 require("hyprland_configs.appearance")
 require("hyprland_configs.keybinds")
