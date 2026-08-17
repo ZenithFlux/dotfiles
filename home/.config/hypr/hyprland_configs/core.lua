@@ -78,24 +78,6 @@ hl.config({
         force_default_wallpaper = -1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
         disable_hyprland_logo   = false, -- If true disables the random hyprland logo / anime girl background. :(
     },
-
-    input = {
-        kb_layout  = "us",
-        kb_variant = "",
-        kb_model   = "",
-        kb_options = "",
-        kb_rules   = "",
-
-        follow_mouse = 1,
-
-        sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
-	accel_profile = "flat",
-
-        touchpad = {
-            natural_scroll = true,
-            scroll_factor = 0.1,
-        },
-    },
 })
 
 -----------------------
@@ -115,14 +97,3 @@ hl.config({
 -- hl.permission("/usr/(bin|local/bin)/grim", "screencopy", "allow")
 -- hl.permission("/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencopy", "allow")
 -- hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
-
-hl.gesture({
-    fingers = 3,
-    direction = "horizontal",
-    action = "scroll_move"
-})
-hl.gesture({
-    fingers = 4,
-    direction = "horizontal",
-    action = "workspace"
-})
