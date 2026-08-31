@@ -39,7 +39,7 @@ Run `./check_sync.sh` to check if the repo files are synced with the system.
 
 - **CopyQ**: All global shortcuts must be added both in the app's preferences and in the Hyprland config. `ALT + V` is already added in the Hyprland config.
 
-- **Thunar**: Install the plugins and addons mentioned [here](https://wiki.archlinux.org/title/Thunar).
+- **Thunar**: Install the plugins and addons mentioned [here](https://wiki.archlinux.org/title/Thunar). If thunar fails to find the terminal, run `sudo ln -s /usr/bin/<your-terminal> /usr/bin/xterm`.
 
 - **Timeshift**: After setting it up, enable cronie using `sudo systemctl enable --now cronie.service` for scheduled snapshots to work.
 
