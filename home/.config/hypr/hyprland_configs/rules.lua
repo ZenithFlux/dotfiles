@@ -67,6 +67,15 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name = "float-copyq",
+    match = {
+        initial_class = "com.github.hluk.copyq",
+    },
+    float = true,
+    size = {"monitor_w * 0.5", "monitor_h * 0.5"}
+})
+
+hl.window_rule({
     name = "position-screenshare-bar",
     match = {
         initial_title = '.* is sharing your screen.',

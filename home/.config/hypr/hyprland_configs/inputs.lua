@@ -8,7 +8,7 @@ hl.config({
 
         follow_mouse = 1,
 
-        sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
+        sensitivity = -0.5, -- -1.0 - 1.0, 0 means no modification.
         accel_profile = "flat",
 
         touchpad = {
@@ -18,6 +18,10 @@ hl.config({
     },
 })
 
+hl.device({
+    name = "elan07fb:00-04f3:321a-touchpad";
+    sensitivity = 0,
+})
 
 hl.gesture({
     fingers = 3,
@@ -29,9 +33,4 @@ hl.gesture({
     fingers = 4,
     direction = "horizontal",
     action = "workspace"
-})
-
-hl.device({
-    name = "2.4g-wireless-mouse";
-    sensitivity = -0.5,
 })

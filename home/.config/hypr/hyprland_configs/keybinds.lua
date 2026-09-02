@@ -4,11 +4,39 @@ local mainMod = "ALT"
 
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/reload_configs.sh"))
 
+hl.bind(mainMod .. " + O", function()
+    local active_mon = hl.get_active_monitor()
+    if active_mon ~= nil and active_mon.name ~= "eDP-1" and active_mon.name ~= "HDMI-A-1" then
+        return
+    end
+
+    local disable_hdmi = active_mon == nil or active_mon.name == "HDMI-A-1"
+
+    hl.monitor({
+        output = "eDP-1",
+        disabled = not disable_hdmi,
+        mode = "preferred",
+        position = "0x0",
+        scale = vars.eDP1_display_scale,
+        icc = vars.eDP1_icc_path(),
+    })
+
+    hl.monitor({
+        output = "HDMI-A-1",
+        disabled = disable_hdmi,
+        mode = "preferred",
+        position = "0x0",
+        scale = vars.HDMI_display_scale,
+    })
+end)
+
 hl.bind(mainMod .. " + END", hl.dsp.exec_cmd("poweroff"))
 hl.bind(mainMod .. " + KP_END", hl.dsp.exec_cmd("poweroff"))
 hl.bind(mainMod .. " + SHIFT + END", hl.dsp.exec_cmd("reboot"))
 hl.bind(mainMod .. " + SHIFT + KP_END", hl.dsp.exec_cmd("reboot"))
 hl.bind(mainMod .. " + DELETE", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(mainMod .. " + HOME", hl.dsp.exec_cmd("loginctl lock-session"))
+hl.bind(mainMod .. " + KP_HOME", hl.dsp.exec_cmd("loginctl lock-session"))
 
 hl.bind(mainMod .. " + V", hl.dsp.global("com.github.hluk.copyq:ALT+V||Show/hide main window"))
 

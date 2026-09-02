@@ -4,24 +4,19 @@ local vars = require("hyprland_configs.vars")
 ---- MONITORS ----
 ------------------
 
----@type string|nil
-local icc_path = "/usr/share/color/icc/main.icc"
-
----@cast icc_path string
-local f = io.open(icc_path, "rb")
-if f then
-    f:close()
-else
-    icc_path = nil
-end
-
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
     output = "eDP-1",
-    mode = "1920x1080@144",
+    disabled = false,
+    mode = "preferred",
     position = "0x0",
-    scale = vars.display_scale,
-    icc = icc_path,
+    scale = vars.eDP1_display_scale,
+    icc = vars.eDP1_icc_path(),
+})
+
+hl.monitor({
+    output = "HDMI-A-1",
+    disabled = true,
 })
 
 -------------------
