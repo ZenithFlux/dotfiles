@@ -68,7 +68,8 @@
         // "format-bluetooth": "{volume}% {icon}",
         "format-muted": " {volume}%",
         "format-icons": ["", ""],
-        "scroll-step": 1
+        "scroll-step": 1,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     },
 
     "backlight": {

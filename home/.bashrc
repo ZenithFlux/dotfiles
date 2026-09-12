@@ -31,7 +31,7 @@ function update {
         echo "Starting 'reflector.service' to update /etc/pacman.d/mirrorlist ..."
         echo -e "To stop it, run \`sudo systemctl stop reflector.service\`.\n"
         sudo systemctl start --no-block reflector.service && journalctl -fu reflector.service
-    elif [ "$1" = "pkgs" ]; then
+    elif [ "$1" = "system" ]; then
         paru -Syu
         hyprpm update
     else
