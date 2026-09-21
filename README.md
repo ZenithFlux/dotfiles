@@ -17,7 +17,7 @@ Run `./check_sync.sh` to check if the repo files are synced with the system.
 
 - **Hyprland**
     - Requires: `dunst pipewire wireplumber xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-desktop-portal-gnome hyprpolkitagent qt5-wayland qt6-wayland xorg-xhost`
-    - Apps used in config: `hyprpaper hypridle hyprlock kitty thunar waybar rofi rofimoji brave copyq`
+    - Apps used in config: `hyprpm hyprshutdown hyprpaper hypridle hyprlock kitty thunar waybar rofi rofimoji brave copyq`
     - Plugins used: [HyprCapture](https://github.com/gfhdhytghd/HyprCapture)
     - Cursor Theme: [Bibata-Modern-Classic](https://github.com/ful1e5/Bibata_Cursor)
     - You may want to change monitor name in the `hypr/` configs.

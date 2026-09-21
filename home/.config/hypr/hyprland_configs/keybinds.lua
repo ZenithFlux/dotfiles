@@ -17,8 +17,9 @@ hl.bind(mainMod .. " + O", function()
         disabled = not disable_hdmi,
         mode = "preferred",
         position = "0x0",
-        scale = vars.eDP1_display_scale,
-        icc = vars.eDP1_icc_path(),
+        scale = vars.eDP1.display_scale,
+        vrr = vars.eDP1.vrr,
+        icc = vars.eDP1.icc(),
     })
 
     hl.monitor({
@@ -26,7 +27,8 @@ hl.bind(mainMod .. " + O", function()
         disabled = disable_hdmi,
         mode = "preferred",
         position = "0x0",
-        scale = vars.HDMI_display_scale,
+        scale = vars.hdmi.display_scale,
+        vrr = vars.hdmi.vrr,
     })
 end)
 

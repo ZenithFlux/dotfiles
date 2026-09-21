@@ -18,9 +18,9 @@ hl.env("LIBSEAT_BACKEND", "logind")
 -- Use kvantum + qt6ct-kde to configure themes for QT applications
 hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
 
-hl.env("GDK_SCALE", tostring(vars.eDP1_display_scale))
-hl.env("HYPRCURSOR_SIZE", tostring(math.floor(16 * vars.eDP1_display_scale)))
-hl.env("XCURSOR_SIZE", tostring(math.floor(16 * vars.eDP1_display_scale)))
+hl.env("GDK_SCALE", tostring(vars.eDP1.display_scale))
+hl.env("HYPRCURSOR_SIZE", tostring(math.floor(16 * vars.eDP1.display_scale)))
+hl.env("XCURSOR_SIZE", tostring(math.floor(16 * vars.eDP1.display_scale)))
 
 hl.env("HYPRCURSOR_THEME", vars.cursor_theme)
 hl.env("XCURSOR_THEME", vars.cursor_theme)

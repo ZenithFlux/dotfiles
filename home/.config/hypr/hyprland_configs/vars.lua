@@ -1,20 +1,26 @@
 return {
-    eDP1_display_scale = 1.2,
-    HDMI_display_scale = 1,
-    eDP1_icc_path = function()
-        ---@type string|nil
-        local icc_path = "/usr/share/color/icc/main.icc"
+    eDP1 = {
+        display_scale = 1.2,
+        vrr = 2,
+        icc = function()
+            ---@type string|nil
+            local icc_path = "/usr/share/color/icc/main.icc"
 
-        ---@cast icc_path string
-        local f = io.open(icc_path, "rb")
-        if f then
-            f:close()
-        else
-            icc_path = nil
-        end
+            ---@cast icc_path string
+            local f = io.open(icc_path, "rb")
+            if f then
+                f:close()
+            else
+                icc_path = nil
+            end
 
-        return icc_path
-    end,
+            return icc_path
+        end,
+    },
+    hdmi = {
+        display_scale = 2,
+        vrr = 2,
+    },
 
     cursor_theme = "Bibata-Modern-Classic",
 

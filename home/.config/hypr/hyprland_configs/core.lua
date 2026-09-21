@@ -10,8 +10,9 @@ hl.monitor({
     disabled = false,
     mode = "preferred",
     position = "0x0",
-    scale = vars.eDP1_display_scale,
-    icc = vars.eDP1_icc_path(),
+    scale = vars.eDP1.display_scale,
+    vrr = vars.eDP1.vrr,
+    icc = vars.eDP1.icc(),
 })
 
 hl.monitor({
