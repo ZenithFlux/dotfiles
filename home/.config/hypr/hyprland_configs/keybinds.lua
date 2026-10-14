@@ -11,25 +11,29 @@ hl.bind(mainMod .. " + O", function()
     end
 
     local disable_hdmi = active_mon == nil or active_mon.name == "HDMI-A-1"
-
-    hl.monitor({
+    local eDP1_params = {
         output = "eDP-1",
         disabled = not disable_hdmi,
         mode = "preferred",
-        position = "0x0",
         scale = vars.eDP1.display_scale,
         vrr = vars.eDP1.vrr,
         icc = vars.eDP1.icc(),
-    })
-
-    hl.monitor({
+    }
+    local HDMI_params = {
         output = "HDMI-A-1",
         disabled = disable_hdmi,
         mode = "preferred",
-        position = "0x0",
         scale = vars.hdmi.display_scale,
         vrr = vars.hdmi.vrr,
-    })
+    }
+
+    if disable_hdmi then
+        hl.monitor(eDP1_params)
+        hl.monitor(HDMI_params)
+    else
+        hl.monitor(HDMI_params)
+        hl.monitor(eDP1_params)
+    end
 end)
 
 hl.bind(mainMod .. " + END", hl.dsp.exec_cmd("poweroff"))

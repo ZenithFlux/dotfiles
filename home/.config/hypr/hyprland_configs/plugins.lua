@@ -8,4 +8,5 @@ hl.config({
 })
 
 -- Plugin Keybinds
-hl.bind("PRINT", hl.plugin.hyprcapture.open)
+hl.bind("PRINT", function() hl.plugin.hyprcapture.open("fullscreen") end)
+hl.bind("SHIFT + PRINT", function() hl.plugin.hyprcapture.open("region") end)
