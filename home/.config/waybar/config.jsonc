@@ -69,7 +69,9 @@
         "format-muted": " {volume}%",
         "format-icons": ["", ""],
         "scroll-step": 1,
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-"
     },
 
     "backlight": {

@@ -20,7 +20,7 @@ Run `./check_sync.sh` to check if the repo files are synced with the system.
     - Apps used in config: `hyprpm hyprshutdown hyprpaper hypridle hyprlock kitty thunar waybar rofi rofimoji brave copyq`
     - Plugins used: [HyprCapture](https://github.com/gfhdhytghd/HyprCapture)
     - Cursor Theme: [Bibata-Modern-Classic](https://github.com/ful1e5/Bibata_Cursor)
-    - You may want to change monitor name in the `hypr/` configs.
+    - You may want to change monitor names (`eDP-1` and `HDMI-A-1`) in the `hypr/` configs.
 
 - **Fonts**: The following fonts are a must install:
     - **A text font (like `noto-fonts noto-fonts-cjk`)**: Required to draw GUI windows and display text.
