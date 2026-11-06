@@ -25,6 +25,7 @@ hl.bind(mainMod .. " + O", function()
         mode = "preferred",
         scale = vars.hdmi.display_scale,
         vrr = vars.hdmi.vrr,
+        supports_wide_color = vars.hdmi.supports_wide_color
     }
 
     if disable_hdmi then
@@ -44,7 +45,7 @@ hl.bind(mainMod .. " + DELETE", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/n
 hl.bind(mainMod .. " + HOME", hl.dsp.exec_cmd("loginctl lock-session"))
 hl.bind(mainMod .. " + KP_HOME", hl.dsp.exec_cmd("loginctl lock-session"))
 
-hl.bind(mainMod .. " + V", hl.dsp.global("com.github.hluk.copyq:ALT+V||Show/hide main window"))
+hl.bind(mainMod .. " + V", hl.dsp.global("com.github.hluk.copyq:||Show/hide main window||"))
 
 hl.bind(mainMod .. " + SHIFT + T", function()
     hl.dispatch(hl.dsp.focus({ workspace = 1 }))
