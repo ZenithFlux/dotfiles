@@ -25,6 +25,7 @@ hl.bind(mainMod .. " + O", function()
         mode = "preferred",
         scale = vars.hdmi.display_scale,
         vrr = vars.hdmi.vrr,
+        supports_wide_color = vars.hdmi.supports_wide_color
     }
 
     if disable_hdmi then
